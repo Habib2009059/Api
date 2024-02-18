@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Add event handler in different ways</h1>
+    <ul>
+        <li>Lorem, ipsum.</li>
+        <li>Minus, suscipit.</li>
+        <li onclick="this.innerText='text changed!!' ">Ab, harum?</li>
+        <li onclick="itemClickHandler(event)">Unde, laboriosam.</li>
+        <li id="lastPerson">Earum, placeat?</li>
+    </ul>
+
+    <script>
+        function itemClickHandler(event){
+            console.log(event.target.innerText)
+        }
+        document.getElementById('lastPerson').addEventListener('click',itemClickHandler);
+
+    </script>
+</body>
+</html>
